@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './index.less'
-import { CapsuleTabs } from 'antd-mobile'
+// import { CapsuleTabs } from 'antd-mobile'
 import classnames from 'classnames'
 
 const tabs = [

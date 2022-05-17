@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Space } from 'antd-mobile'
+import { Button } from 'antd-mobile'
 import { MinusCircleOutline } from 'antd-mobile-icons'
 
 const Component = () => {

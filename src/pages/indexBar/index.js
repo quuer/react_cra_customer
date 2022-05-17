@@ -28,6 +28,7 @@ const content = [
     children: ['F1', 'F11', 'F21', 'F31', 'F41', 'F51', 'F61', 'F71']
   }
 ]
+
 const Component = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   useEffect(() => {
@@ -43,7 +44,8 @@ const Component = () => {
       })
     })
     return () => {
-      window.removeEventListener('scroll', () => {})
+      window.removeEventListener('scroll', () => {
+      })
     }
   }, [])
   return (

@@ -1,10 +1,10 @@
 import React from 'react'
-import { CapsuleTabs, List, Slider, Stepper, Switch } from 'antd-mobile'
+import { CapsuleTabs, List, Stepper, Switch } from 'antd-mobile'
 import {
-  UnorderedListOutline, PayCircleOutline, SetOutline, HeartOutline
+  UnorderedListOutline, PayCircleOutline, SetOutline
 } from 'antd-mobile-icons'
 
-export default () => {
+const Component = () => {
   return (<>
     <List header="基础用法">
       <List.Item>1</List.Item>
@@ -61,3 +61,5 @@ export default () => {
     </List>
   </>)
 }
+
+export default Component
