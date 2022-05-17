@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { routes } from '../../config/router'
+import { Route, Routes ,useRoutes} from 'react-router-dom'
+import routes from '../../config/router'
 
 /*react-routers v6的写法：
 1.使用Routes代替Switch;
