@@ -7,7 +7,7 @@ import { routes } from '../../config/router'
 2.使用element代替component
 */
 const Component = (props) => {
-  console.log('basiprops', props)
+  // console.log('basiprops', props)
   return (
     <Routes>
       {routes.map(route => {
