@@ -53,6 +53,20 @@ export const routes = [
     component: lazy(() => import('../pages/report'))
   },
   {
+    name: 'list',
+    path: '/list',
+    auth: true,
+    exact: true,
+    component: lazy(() => import('../pages/list'))
+  },
+  {
+    name: 'indexBar',
+    path: '/indexBar',
+    auth: true,
+    exact: true,
+    component: lazy(() => import('../pages/indexBar'))
+  },
+  {
     path: '*',
     auth: false,
     component: lazy(() => import('../pages/error/NotFound'))
