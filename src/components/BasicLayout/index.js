@@ -1,5 +1,8 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { generatePath, useNavigate,useLocation } from 'react-router-dom'
+
 import { routes } from '../../config/router'
 
 /*react-routers v6的写法：
@@ -7,24 +10,28 @@ import { routes } from '../../config/router'
 2.使用element代替component
 */
 const Component = (props) => {
-  // console.log('basiprops', props)
+  const location = useLocation()
   return (
-    <Routes>
-      {routes.map(route => {
-        return (
-          <Route
-            key={route.path}
-            exact={route.exact}
-            path={route.path}
-            element={
-              <Suspense>
-                <route.component />
-              </Suspense>
-            }
-          />
-        )
-      })}
-    </Routes>
+    <TransitionGroup>
+      <CSSTransition key={location.pathname} timeout={1000} classNames="fade">
+        <Routes>
+          {routes.map(route => {
+            return (
+              <Route
+                key={route.path}
+                exact={route.exact}
+                path={route.path}
+                element={
+                  <Suspense>
+                    <route.component />
+                  </Suspense>
+                }
+              />
+            )
+          })}
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
   )
 }
 
