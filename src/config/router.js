@@ -3,7 +3,7 @@ import { lazy } from 'react'
 export const routes = [
   {
     name: '登录',
-    path: '/login',
+    path: '/',
     exact: true,
     component: lazy(() => import('../pages/login'))
   },
@@ -19,24 +19,24 @@ export const routes = [
     path: '/about',
     auth: true,
     exact: true,
-    component: lazy(() => import('../pages/about')),
-    children: [
-      {
-        path: '/about/info',
-        auth: true,
-        component: lazy(() => import('../pages/home/info'))
-      },
-      {
-        path: '/about/b/:id',
-        auth: true,
-        component: lazy(() => import('../pages/home/detail'))
-      },
-      {
-        path: '/about/*',
-        auth: false,
-        component: lazy(() => import('../pages/error/NotFound'))
-      }
-    ]
+    component: lazy(() => import('../pages/about'))
+    // children: [
+    //   {
+    //     path: '/about/info',
+    //     auth: true,
+    //     component: lazy(() => import('../pages/home/info'))
+    //   },
+    //   {
+    //     path: '/about/b/:id',
+    //     auth: true,
+    //     component: lazy(() => import('../pages/home/detail'))
+    //   },
+    //   {
+    //     path: '/about/*',
+    //     auth: false,
+    //     component: lazy(() => import('../pages/error/NotFound'))
+    //   }
+    // ]
   },
   {
     name: '我的',

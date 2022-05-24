@@ -3,7 +3,7 @@ import { lazy } from 'react'
 const routes = [
   {
     name: '登录',
-    path: '/login',
+    path: '/login.js',
     exact: true,
     component: lazy(() => import('../pages/login'))
   },

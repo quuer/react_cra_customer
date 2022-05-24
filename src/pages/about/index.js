@@ -1,16 +1,12 @@
 import React, { useState } from 'react'
-import { generatePath, useNavigate,useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import styles from './index.less'
 import { Button } from 'antd-mobile'
 import { connect } from 'react-redux'
 
 const Component = (props) => {
-  console.log(props, '◀◀◀props')
-  console.log(process.env.REACT_APP_NAME, process.env.NODE_ENV, '◀◀◀process.env.REACT_APP_NAME')
   const navigate = useNavigate()
-  const location =useLocation()
-  console.log(location, '◀◀◀location')
   const { dispatch, city, wea, win, win_speed, win_meter } = props
   const ongetApiTest = () => {
     dispatch({ type: 'apitest/getApiTest' })
@@ -20,7 +16,7 @@ const Component = (props) => {
   }
   return (
     <div className={styles.about}>
-      <Button onClick={onNavigate}>点击</Button>
+      {/*<Button onClick={onNavigate}>登录</Button>*/}
       <Button onClick={ongetApiTest} color="success">请求</Button>
       <ul>
         <li>城市：{city}</li>

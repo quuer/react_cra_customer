@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { generatePath, useNavigate,useLocation } from 'react-router-dom'
-
+import { useLocation } from 'react-router-dom'
+import styles from './index.less'
 import { routes } from '../../config/router'
 
 /*react-routers v6的写法：
@@ -12,8 +12,8 @@ import { routes } from '../../config/router'
 const Component = (props) => {
   const location = useLocation()
   return (
-    <TransitionGroup>
-      <CSSTransition key={location.pathname} timeout={1000} classNames="fade">
+    // <TransitionGroup>
+    //   <CSSTransition key={location.key} timeout={500} classNames="fade">
         <Routes>
           {routes.map(route => {
             return (
@@ -30,8 +30,8 @@ const Component = (props) => {
             )
           })}
         </Routes>
-      </CSSTransition>
-    </TransitionGroup>
+    //   </CSSTransition>
+    // </TransitionGroup>
   )
 }
 

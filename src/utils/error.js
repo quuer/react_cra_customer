@@ -2,7 +2,7 @@ import React from 'react'
 import { Toast } from 'antd-mobile'
 import { ExclamationCircleOutline } from 'antd-mobile-icons'
 
-export default (error, duration = 122500) => {
+export default (error, duration = 1500) => {
   Toast.show({
     // icon: 'fail',
     icon: <ExclamationCircleOutline fontSize={50} />,
